@@ -20,7 +20,7 @@ $IPT -F -t mangle
 
 #Accept loopback established and/or related connections
 $IPT -A INPUT -i lo -j ACCEPT
-$IPT -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+#$IPT -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 
 #$IPT -A INPUT -p tcp --dport ssh -i $INT -j ACCEPT
 #$IPT -A INPUT -j DROP
